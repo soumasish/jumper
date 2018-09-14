@@ -6,8 +6,8 @@ This is an utility script that takes an opinionated approach to setting up your 
 
 Please have homebrew installed to get this script to work. To install homebrew, run the following command
 
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+
 ## Usage:
 
 
