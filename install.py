@@ -29,6 +29,22 @@ def _create_bash_profile_bashrc(username):
         return False
 
 
+def install_atom():
+    os.system("brew install atom")
+
+
+
+def spice_up_bash(username):
+    rc = open('/Users/{}/.bashrc'.format(username), 'a')
+    rc.write("export PS2=\"\w | $\"\n")
+    rc.write("alias ll='ls -FGlAhp'\n")
+    rc.write("alias cp='cp -iv'\n")
+    rc.write("alias mv='mv -iv'\n")
+    rc.write("alias less='less -FSRXc'\n")
+    rc.write("alias top=\"top -R -F -s 10 -o rsize\"")
+    rc.close()
+
+
 def _install_python3_add_alias(username):
     os.system('brew reinstall python@3')
     rc = open('/Users/{}/.bashrc'.format(username), 'a')
@@ -46,5 +62,4 @@ def _install_java8_add_path(username):
 
 
 if __name__ == '__main__':
-    r = _install_java8_add_path('soumasishgoswami')
-    print(r)
+    spice_up_bash("soumasishgoswami")
